@@ -6,6 +6,10 @@ Rails.application.routes.draw do
 
   # verb 'path', to: 'controller#action'
 
+  # poderia ter feito todas essas routes com a linha abaixo:
+  # resources :tasks
+
+
   # Read all tasks
   get 'tasks', to: 'tasks#index', as: :tasks # fez essa assinatura para voltar para lista principal
 

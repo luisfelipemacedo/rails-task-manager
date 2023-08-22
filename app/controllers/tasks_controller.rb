@@ -1,4 +1,7 @@
 class TasksController < ApplicationController
+  # descomenta before_action, not_repeat_code e apaga manualmente cada codigo repetido dos metodos no colchetes abaixo
+  # before_action :not_repeat_code, only: %i[show edit update destroy]
+
   def index
     @tasks = Task.all # pega todos os tasks do DB
   end
@@ -41,5 +44,7 @@ class TasksController < ApplicationController
     params.require(:task).permit(:title, :details, :completed)
   end
 
-
+  # def not_repeat_code
+  #   @task = Task.find(params[:id])
+  # end
 end
